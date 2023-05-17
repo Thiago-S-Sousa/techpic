@@ -11,7 +11,11 @@ import { PhotoService } from '../photo/photo.service';
 })
 export class PhotoListComponent implements OnInit {
   photos: Photo[] = [];
+  filter: string = '';
 
+  onKeyup(event: any) {
+    this.filter = event.target.value;
+  }
   constructor(
     private photoService: PhotoService,
     private activatedRoute: ActivatedRoute // Ativa rotas aleatorias passadas no momento
