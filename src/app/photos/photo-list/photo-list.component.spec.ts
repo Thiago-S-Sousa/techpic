@@ -8,9 +8,8 @@ describe('PhotoListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PhotoListComponent ]
-    })
-    .compileComponents();
+      declarations: [PhotoListComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PhotoListComponent);
     component = fixture.componentInstance;
