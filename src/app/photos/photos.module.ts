@@ -1,24 +1,12 @@
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
-import { PhotoFormComponent } from './photo-form/photo-form.component';
-import { FilterByDescription } from './photo-list/filter-by-description.pipe';
-import { PhotoListComponent } from './photo-list/photo-list.component';
-import { PhotosComponent } from './photo-list/photos/photos.component';
-import { PhotoComponent } from './photo/photo.component';
-import { LoadButtonComponent } from './photo-list/load-button/load-button.component';
+import { PhotoFormModule } from './photo-form/photo-form.module';
+import { PhotoListModule } from './photo-list/photo-list.module';
+import { PhotoModule } from './photo/photo.module';
 
 @NgModule({
-  declarations: [
-    PhotoComponent,
-    PhotoListComponent,
-    PhotoFormComponent,
-    PhotosComponent,
-    FilterByDescription,
-    LoadButtonComponent,
-  ],
+  declarations: [],
   exports: [], //exports: deixa o modulo publico
-  imports: [HttpClientModule, CommonModule], //CommomModule - è uma boa prática já importar a cada módulo novo
+  imports: [PhotoModule, PhotoFormModule, PhotoListModule], //CommomModule - è uma boa prática já importar a cada módulo novo
 })
 export class PhotosModule {}
